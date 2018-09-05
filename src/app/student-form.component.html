@@ -1,0 +1,46 @@
+<div class="row container">
+<div class="col-md-5">
+    <h1>Information Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="firstname" name="fname" [(ngModel)]="Student.fname" required>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lastname" name="lname" [(ngModel)]="Student.lname">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="mailid" [(ngModel)]="Student.email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" class="form-control" id="password" name="pwd" [(ngModel)]="Student.password">
+        </div>
+
+        <button type="submit" class="btn btn-success" id="savebtn" (click)="formSubmit()">Save</button>
+        <button type="button" class="btn btn-info" id="updatebtn" (click)="Update()">Update</button>
+        <button type="button" class="btn btn-warning" id="retrivebtn" (click)="Retrive()">Retrive</button>
+    </form>
+</div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-4">
+        <table style="width: 100%" class="table table-bordered table-sm">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Update</th>
+            </tr>
+            <tr *ngFor = "let student of students">
+                <td>{{student.id}}</td>
+                <td>{{student.fname}}</td>
+                <td>{{student.lname}}</td>
+                <td> <button type="button" class="btn btn-info" data-id="{{student.id}}" (click)="formUpdate($event,student.id)">update</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
