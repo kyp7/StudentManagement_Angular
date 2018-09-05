@@ -32,6 +32,6 @@ Shut it down manually with `Ctrl-C`.
 
 You're ready to write your application.
 ## Functionalities
-# save Button: To create the new user.
-# Retrive Button: To retrive all the data.
-# Update Button: TO update the data.
+### save Button: To create the new user.
+### Retrive Button: To retrive all the data.
+### Update Button: To update the data.
